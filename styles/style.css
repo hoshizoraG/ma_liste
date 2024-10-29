@@ -1,0 +1,213 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f8ff;
+    color: #333;
+    margin: 0;
+    padding: 0;
+	overflow-x: hidden;
+}
+
+header {
+    background-color: #581845;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+h1 {
+    margin: 0;
+}
+
+main {
+    padding: 20px;
+}
+
+.liste {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+h2 {
+    color: #581845;
+	margin-top:5px;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    background-color: #e7e7e7;
+    margin: 20px 0; /* Espace entre chaque idée */
+    padding: 15px; /* Padding interne */
+    border-radius: 5px;
+    transition: transform 0.2s; /* Transition pour l'effet de survol */
+}
+
+li:hover {
+    transform: translatey(-5px); /* Effet de survol */
+}
+
+h3 {
+    margin-top: 10px ;
+}
+
+img {
+    max-width: 170px; /* Définit une largeur maximale pour les images */
+    height: auto; /* Maintient le ratio d'aspect */
+    border-radius: 5px;
+    display: block; /* Assure que l'image occupe tout l'espace horizontal */
+    margin: 10px 0; /* Espace autour de l'image */
+}
+
+p {
+    margin: 10px 0 0;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color:  #581845 ;
+    color: white;
+    bottom: 0;
+    width: 100%;
+}
+
+.image-container {
+    display: flex;
+    justify-content: flex-start; /* ou space-between selon l'espacement désiré */
+}
+
+.image-container img {
+    max-width: 170px; /* Ajuste la taille si nécessaire */
+    margin: 0 10px; /* Espacement entre les images */
+}
+
+.small-image {
+    width: 140px; /* Ajustez la taille selon vos préférences */
+    height: auto; /* Conserve les proportions */
+}
+.dino-extension {
+    width: auto; /* Conserve la largeur d'origine */
+    height: auto; /* Conserve la hauteur d'origine */
+    max-width: 100%; /* Empêche l'image de dépasser la largeur de son conteneur */
+    max-height: 100%; /* Empêche l'image de dépasser la hauteur de son conteneur */
+    object-fit: contain; /* Conserve les proportions de l'image */
+}
+
+
+body {
+    position: relative; /* Nécessaire pour le positionnement absolu de la flèche */
+}
+
+header {
+    display: flex;
+    align-items: center; /* Centre verticalement le logo et le titre */
+    justify-content: center; /* Centre le titre */
+    position: relative; /* Pour le positionnement du logo */
+}
+
+.logo {
+    position: absolute; /* Pour positionner le logo à gauche */
+    left: 20px; /* Espace à gauche */
+    width: 50px; /* Ajustez la taille du logo */
+}
+
+.title {
+    margin-left: 70px; /* Espace pour le logo */
+    text-align: center; /* Centre le titre dans le conteneur */
+}
+
+.scroll-to-top {
+    position: fixed;
+    bottom: 20px; /* Espace du bas */
+    right: 20px; /* Espace à droite */
+    font-size: 24px; /* Taille de la flèche */
+    text-decoration: none; /* Supprime le soulignement */
+    background-color: rgba(0, 0, 0, 0.7); /* Fond semi-transparent */
+    color: white; /* Couleur du texte */
+    border-radius: 50%; /* Forme ronde */
+    padding: 10px; /* Espace autour de la flèche */
+    display: none; /* Caché par défaut */
+    opacity: 0; /* Opacité initiale */
+    transition: opacity 0.3s ease, transform 0.3s ease; /* Transition pour l'opacité et la transformation */
+}
+
+.scroll-to-top.show {
+    display: block; /* Affiche le bouton */
+    opacity: 1; /* Rendre visible */
+    transform: translateY(0); /* Position d'origine */
+}
+
+.scroll-to-top.hide {
+    opacity: 0; /* Rendre invisible */
+    transform: translateY(10px); /* Descendre légèrement */
+}
+
+
+
+/* Affiche la flèche lorsqu'on défile vers le bas */
+window.onscroll = function() {
+    const scrollToTop = document.querySelector('.scroll-to-top');
+    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+        scrollToTop.style.display = "block";
+    } else {
+        scrollToTop.style.display = "none";
+    }
+}
+
+/* Styles pour les écrans plus petits */
+@media (max-width: 600px) {
+    header, footer {
+        padding: 15px; /* Réduit le padding pour les petits écrans */
+    }
+
+    li {
+        margin: 15px 0; /* Espace réduit pour les petits écrans */
+    }
+
+    img {
+        max-width: 80%; /* Limite la largeur des images à 80% du conteneur sur mobile */
+    }
+	.image-container {
+    display: flex;
+    flex-wrap: wrap; /* Permet aux images de passer à la ligne */
+    justify-content: center; /* Centre les images */
+    gap: 10px; /* Espace entre les images */
+}
+body{
+	overflow-x: hidden;
+}
+
+.image-container img {
+    width: 100%; /* Adapte la largeur à 100% du conteneur */
+    height: auto; /* Garde les proportions de l'image */
+    max-width: 300px; /* Limite la largeur maximale pour les écrans larges */
+}
+    .image-container img {
+        max-width: 90%; /* Adapte la largeur des images sur les petits écrans */
+    }
+	.header-container {
+    display: flex;
+    align-items: center; /* Centre verticalement le logo et le titre */
+    justify-content: center; /* Centre tout le contenu par défaut */
+    padding: 20px; /* Espace autour du contenu */
+}
+
+.logo {
+    width: 10%; /* Ajustez la largeur du logo */
+    max-width: 100px; /* Largeur maximale pour le logo */
+    height: auto; /* Maintient les proportions de l'image */
+    margin-right: auto; /* Pousse le titre vers le centre */
+}
+
+h1 {
+    font-size: 1.5em; /* Taille de police pour les mobiles */
+    text-align: center; /* Centre le texte */
+    margin: 0; /* Supprime les marges par défaut */
+}
+}
+
