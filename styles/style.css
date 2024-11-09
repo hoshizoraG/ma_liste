@@ -131,7 +131,7 @@ header {
 .logo {
     position: absolute; /* Pour positionner le logo à gauche */
     left: 20px; /* Espace à gauche */
-    width: 50px; /* Ajustez la taille du logo */
+    width: 55px; /* Ajustez la taille du logo */
 }
 
 .title {
