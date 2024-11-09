@@ -13,7 +13,25 @@ header {
     padding: 20px;
     text-align: center;
 }
+a:before {
+  content: '➤'; /* Ajoute une flèche avant le lien */
+  margin-right: 10px;
+  font-size: 20px;
+}
 
+a {
+  color: #000000;
+  text-decoration: none;
+  transition: all 0.3s ease; /* Transition pour un effet fluide */
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+a:hover {
+  color: blue; /* Changer la couleur au survol */
+   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+   transform: scale(1.1);
+  border-bottom: 2px solid blue; /* Ajouter un soulignement au survol */
+}
 h1 {
     margin: 0;
 }
