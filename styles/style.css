@@ -231,6 +231,10 @@ body{
     .image-container img {
         max-width: 90%; /* Adapte la largeur des images sur les petits écrans */
     }
+	.small-image {
+    width: 120px; /* Ajustez la taille selon vos préférences */
+    height: auto; /* Conserve les proportions */
+}
 	.header-container {
     display: flex;
     align-items: center; /* Centre verticalement le logo et le titre */
