@@ -36,3 +36,24 @@ window.addEventListener('wheel', function(event) {
         event.preventDefault(); // Empêche le défilement vers le bas
     }
 }, { passive: false });
+
+// Fonction qui vérifie la position des éléments pour les rendre visibles au défilement
+function checkVisibility() {
+    const boxes = document.querySelectorAll('.box');
+    const windowHeight = window.innerHeight; // Hauteur de la fenêtre
+    const scrollTop = window.pageYOffset || document.documentElement.scrollTop; // Position du défilement
+
+    // Parcours toutes les box et vérifie si elles sont visibles dans la fenêtre
+    boxes.forEach(function(box) {
+        const boxTop = box.getBoundingClientRect().top + scrollTop; // Position top de la box
+        if (boxTop < scrollTop + windowHeight - 100) { // Si l'élément est visible dans la fenêtre
+            box.classList.add('visible'); // Ajouter la classe "visible" pour activer l'animation
+        }
+    });
+}
+
+// Ajouter un événement qui déclenche la fonction lorsque l'utilisateur fait défiler la page
+window.addEventListener('scroll', checkVisibility);
+
+// Appel initial pour vérifier si les éléments sont déjà visibles au chargement
+document.addEventListener('DOMContentLoaded', checkVisibility);
