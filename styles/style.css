@@ -13,6 +13,7 @@ header {
     padding: 20px;
     text-align: center;
 }
+
 .lien:before {
   content: '➤'; /* Ajoute une flèche avant le lien */
   margin-right: 10px;
@@ -32,6 +33,8 @@ header {
    transform: scale(1.1);
   border-bottom: 2px solid blue; /* Ajouter un soulignement au survol */
 }
+
+
 h1 {
     margin: 0;
 }
@@ -70,7 +73,8 @@ li:hover {
 }
 
 h3 {
-    margin-top: 10px ;
+    margin: 10px ;
+	
 }
 
 img {
@@ -87,16 +91,22 @@ p {
 
 footer {
     text-align: center;
-    padding: 10px;
     background-color:  #581845 ;
     color: white;
     bottom: 0;
     width: 100%;
+    padding: 10px;
+}
+
+
+.scroll-to-top {
+    color: white;
+    text-decoration: none;
 }
 
 .image-container {
     display: flex;
-    justify-content: flex-start; /* ou space-between selon l'espacement désiré */
+    justify-content: space-start; /* ou space-between selon l'espacement désiré */ 
 }
 
 .image-container img {
@@ -131,7 +141,7 @@ header {
 .logo {
     position: absolute; /* Pour positionner le logo à gauche */
     left: 20px; /* Espace à gauche */
-    width: 55px; /* Ajustez la taille du logo */
+    width: 50px; /* Ajustez la taille du logo */
 }
 
 .title {
@@ -152,6 +162,19 @@ header {
     display: none; /* Caché par défaut */
     opacity: 0; /* Opacité initiale */
     transition: opacity 0.3s ease, transform 0.3s ease; /* Transition pour l'opacité et la transformation */
+}
+
+/* Initialiser les box avec une opacité de 0 pour qu'elles soient invisibles au départ */
+.box {
+    opacity: 0;
+    transform: translateY(50px); /* Décalage pour l'effet de mouvement */
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out; /* Animation douce */
+}
+
+/* Lorsque l'élément est visible (ajout d'une classe via JS), il devient opaque */
+.box.visible {
+    opacity: 1;
+    transform: translateY(0); /* Réinitialise la position à sa place d'origine */
 }
 
 .scroll-to-top.show {
