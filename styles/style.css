@@ -205,7 +205,7 @@ footer a {
         max-width: 47%;
     }
     header .logo {
-        top: 17px; /* Ajuste la position en haut */
+        top: 25px; /* Ajuste la position en haut */
         right: 15px; /* Réduit la marge à droite */
         width: 40px; /* Réduit la taille du logo */
     }
