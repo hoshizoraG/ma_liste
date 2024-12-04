@@ -145,7 +145,7 @@ img:hover {
     display: flex;
     gap: 15px;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: left;
     align-items: center;
     margin-top: 20px;
 }
