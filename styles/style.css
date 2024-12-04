@@ -198,14 +198,14 @@ footer a {
 /* --- Responsiveness --- */
 @media (max-width: 768px) {
     header h1 {
-        font-size: 1.8rem;
+        font-size: 1.5rem;
     }
 
     .image-container img {
-        max-width: 50%;
+        max-width: 47%;
     }
     header .logo {
-        top: 10px; /* Ajuste la position en haut */
+        top: 17px; /* Ajuste la position en haut */
         right: 15px; /* Réduit la marge à droite */
         width: 40px; /* Réduit la taille du logo */
     }
@@ -213,7 +213,7 @@ footer a {
 
 @media (max-width: 480px) {
     header h1 {
-        font-size: 1.5rem;
+        font-size: 1.3rem;
     }
 
     img {
@@ -224,7 +224,7 @@ footer a {
         padding: 15px;
     }
     header .logo {
-        top: 8px; /* Position légèrement plus basse */
+        top: 10px; /* Position légèrement plus basse */
         right: 10px; /* Réduit encore la marge */
         width: 35px; /* Encore plus petit pour s'adapter */
     }
