@@ -1,258 +1,233 @@
+/* --- Réinitialisation de base --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f0f8ff;
+    background: linear-gradient(135deg, #e7e9fc, #c4c9f9);
     color: #333;
     margin: 0;
     padding: 0;
-	overflow-x: hidden;
+    overflow-x: hidden;
 }
 
+/* --- Header --- */
 header {
-    background-color: #581845;
+    background: rgba(88, 24, 69, 0.8);
     color: white;
-    padding: 20px;
     text-align: center;
+    padding: 30px 20px;
+    position: relative;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-.lien:before {
-  content: '➤'; /* Ajoute une flèche avant le lien */
-  margin-right: 10px;
-  font-size: 20px;
+header .logo {
+    position: absolute;
+    left: 20px;
+    top: 12px;
+    width: 60px;
+    height: auto;
 }
 
-.lien {
-  color: #000000;
-  text-decoration: none;
-  transition: all 0.3s ease; /* Transition pour un effet fluide */
-  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+header h1 {
+    font-size: 2rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
 }
 
-.lien:hover {
-  color: blue; /* Changer la couleur au survol */
-   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
-   transform: scale(1.1);
-  border-bottom: 2px solid blue; /* Ajouter un soulignement au survol */
-}
-
-
-h1 {
-    margin: 0;
-}
-
+/* --- Section principale --- */
 main {
-    padding: 20px;
+    padding: 40px 20px;
 }
 
 .liste {
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    padding: 20px;
+    background: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(10px);
+    border-radius: 16px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    margin: 20px auto;
+    max-width: 1200px;
+    animation: fadeIn 0.8s ease-in-out;
+}
+
+h2, h3, h4 {
+    color: #581845;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    font-weight: 500;
 }
 
 h2 {
-    color: #581845;
-	margin-top:5px;
-}
-
-ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-li {
-    background-color: #e7e7e7;
-    margin: 20px 0; /* Espace entre chaque idée */
-    padding: 15px; /* Padding interne */
-    border-radius: 5px;
-    transition: transform 0.2s; /* Transition pour l'effet de survol */
-}
-
-li:hover {
-    transform: translatey(-5px); /* Effet de survol */
+    font-size: 1.5rem;
+    border-bottom: 2px solid #581845;
+    display: inline-block;
+    padding-bottom: 5px;
 }
 
 h3 {
-    margin: 10px ;
-	
+    font-size: 1.4rem;
 }
 
-img {
-    max-width: 170px; /* Définit une largeur maximale pour les images */
-    height: auto; /* Maintient le ratio d'aspect */
-    border-radius: 5px;
-    display: block; /* Assure que l'image occupe tout l'espace horizontal */
-    margin: 10px 0; /* Espace autour de l'image */
+h4 {
+    font-size: 1.2rem;
+    font-style: italic;
 }
 
 p {
-    margin: 10px 0 0;
+    margin-top: 10px;
+    font-size: 1rem;
+    line-height: 1.6;
 }
 
+/* --- Liste des éléments --- */
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+}
+
+li {
+    background: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(10px);
+    border-radius: 12px;
+    margin: 20px 0;
+    padding: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+li:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+.lien {
+    color: #581845;
+    text-decoration: none;
+    font-weight: bold;
+    position: relative;
+    padding-bottom: 2px;
+    transition: all 0.3s ease;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.lien:hover {
+    color: #000;
+    border-bottom: 2px solid #581845;
+    transform: scale(1.1);
+}
+
+.lien:before {
+    content: '➤';
+    margin-right: 8px;
+    font-size: 18px;
+}
+
+/* --- Images --- */
+img {
+    width: 100%; /* Par défaut, occupe toute la largeur disponible */
+    max-width: 200px; /* Limite la taille des images */
+    height: auto; /* Maintient les proportions */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+img:hover {
+    transform: scale(1.05);
+}
+
+/* --- Conteneur d'images --- */
+.image-container {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+
+
+
+/* --- Bouton retour haut de page --- */
+.scroll-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: rgba(88, 24, 69, 0.8);
+    color: white;
+    font-size: 24px;
+    border-radius: 50%;
+    padding: 15px;
+    text-decoration: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s, transform 0.3s;
+}
+
+.scroll-to-top.show {
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.scroll-to-top:hover {
+    background: #333;
+}
+
+/* --- Footer --- */
 footer {
     text-align: center;
-    background-color:  #581845 ;
+    background: rgba(88, 24, 69, 0.8);
     color: white;
-    bottom: 0;
-    width: 100%;
-    padding: 10px;
+    padding: 15px;
+    font-size: 1rem;
+    position: relative;
 }
 
-
-.scroll-to-top {
+footer a {
     color: white;
     text-decoration: none;
 }
 
-.image-container {
-    display: flex;
-    justify-content: space-start; /* ou space-between selon l'espacement désiré */ 
-}
+/* --- Responsiveness --- */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 1.8rem;
+    }
 
-.image-container img {
-    max-width: 170px; /* Ajuste la taille si nécessaire */
-    margin: 0 10px; /* Espacement entre les images */
-}
-
-.small-image {
-    width: 140px; /* Ajustez la taille selon vos préférences */
-    height: auto; /* Conserve les proportions */
-}
-.dino-extension {
-    width: auto; /* Conserve la largeur d'origine */
-    height: auto; /* Conserve la hauteur d'origine */
-    max-width: 100%; /* Empêche l'image de dépasser la largeur de son conteneur */
-    max-height: 100%; /* Empêche l'image de dépasser la hauteur de son conteneur */
-    object-fit: contain; /* Conserve les proportions de l'image */
-}
-
-
-body {
-    position: relative; /* Nécessaire pour le positionnement absolu de la flèche */
-}
-
-header {
-    display: flex;
-    align-items: center; /* Centre verticalement le logo et le titre */
-    justify-content: center; /* Centre le titre */
-    position: relative; /* Pour le positionnement du logo */
-}
-
-.logo {
-    position: absolute; /* Pour positionner le logo à gauche */
-    left: 20px; /* Espace à gauche */
-    width: 55px; /* Ajustez la taille du logo */
-}
-
-.title {
-    margin-left: 70px; /* Espace pour le logo */
-    text-align: center; /* Centre le titre dans le conteneur */
-}
-
-.scroll-to-top {
-    position: fixed;
-    bottom: 20px; /* Espace du bas */
-    right: 20px; /* Espace à droite */
-    font-size: 24px; /* Taille de la flèche */
-    text-decoration: none; /* Supprime le soulignement */
-    background-color: rgba(0, 0, 0, 0.7); /* Fond semi-transparent */
-    color: white; /* Couleur du texte */
-    border-radius: 50%; /* Forme ronde */
-    padding: 10px; /* Espace autour de la flèche */
-    display: none; /* Caché par défaut */
-    opacity: 0; /* Opacité initiale */
-    transition: opacity 0.3s ease, transform 0.3s ease; /* Transition pour l'opacité et la transformation */
-}
-
-/* Initialiser les box avec une opacité de 0 pour qu'elles soient invisibles au départ */
-.box {
-    opacity: 0;
-    transform: translateY(50px); /* Décalage pour l'effet de mouvement */
-    transition: opacity 0.5s ease-out, transform 0.5s ease-out; /* Animation douce */
-}
-
-/* Lorsque l'élément est visible (ajout d'une classe via JS), il devient opaque */
-.box.visible {
-    opacity: 1;
-    transform: translateY(0); /* Réinitialise la position à sa place d'origine */
-}
-
-.scroll-to-top.show {
-    display: block; /* Affiche le bouton */
-    opacity: 1; /* Rendre visible */
-    transform: translateY(0); /* Position d'origine */
-}
-
-.scroll-to-top.hide {
-    opacity: 0; /* Rendre invisible */
-    transform: translateY(10px); /* Descendre légèrement */
-}
-
-
-
-/* Affiche la flèche lorsqu'on défile vers le bas */
-window.onscroll = function() {
-    const scrollToTop = document.querySelector('.scroll-to-top');
-    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
-        scrollToTop.style.display = "block";
-    } else {
-        scrollToTop.style.display = "none";
+    .image-container img {
+        max-width: 45%;
     }
 }
 
-/* Styles pour les écrans plus petits */
-@media (max-width: 600px) {
-    header, footer {
-        padding: 15px; /* Réduit le padding pour les petits écrans */
-    }
-
-    li {
-        margin: 15px 0; /* Espace réduit pour les petits écrans */
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.5rem;
     }
 
     img {
-        max-width: 80%; /* Limite la largeur des images à 80% du conteneur sur mobile */
+        max-width: 90%;
     }
-	.image-container {
-    display: flex;
-    flex-wrap: wrap; /* Permet aux images de passer à la ligne */
-    justify-content: center; /* Centre les images */
-    gap: 10px; /* Espace entre les images */
-}
-body{
-	overflow-x: hidden;
-}
 
-.image-container img {
-    width: 100%; /* Adapte la largeur à 100% du conteneur */
-    height: auto; /* Garde les proportions de l'image */
-    max-width: 300px; /* Limite la largeur maximale pour les écrans larges */
-}
-    .image-container img {
-        max-width: 90%; /* Adapte la largeur des images sur les petits écrans */
+    li {
+        padding: 15px;
     }
-	.small-image {
-    width: 120px; /* Ajustez la taille selon vos préférences */
-    height: auto; /* Conserve les proportions */
-}
-	.header-container {
-    display: flex;
-    align-items: center; /* Centre verticalement le logo et le titre */
-    justify-content: center; /* Centre tout le contenu par défaut */
-    padding: 20px; /* Espace autour du contenu */
 }
 
-.logo {
-    width: 10%; /* Ajustez la largeur du logo */
-    max-width: 100px; /* Largeur maximale pour le logo */
-    height: auto; /* Maintient les proportions de l'image */
-    margin-right: auto; /* Pousse le titre vers le centre */
+/* --- Animation --- */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
-
-h1 {
-    font-size: 1.5em; /* Taille de police pour les mobiles */
-    text-align: center; /* Centre le texte */
-    margin: 0; /* Supprime les marges par défaut */
-}
-}
-
