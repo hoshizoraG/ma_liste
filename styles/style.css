@@ -1,243 +1,173 @@
-/* --- Réinitialisation de base --- */
-* {
+body, h1, h2, h3, h4, p, ul, li, a {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
 body {
-    background: linear-gradient(135deg, #e7e9fc, #c4c9f9);
-    color: #333;
+    font-family: Arial, sans-serif;
+    color: #fff;
+    background-color: #121212;
+    line-height: 1.6;
     margin: 0;
     padding: 0;
-    overflow-x: hidden;
 }
 
-/* --- Header --- */
 header {
-    background: rgba(88, 24, 69, 0.8);
-    color: white;
-    text-align: center;
-    padding: 30px 20px;
-    position: relative;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    background-color: #1f1f1f;
+    padding: 20px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 20px;
+    border-bottom: 2px solid #333;
 }
 
 header .logo {
-    position: absolute;
-    left: 20px;
-    top: 12px;
-    width: 60px;
-    height: auto;
+    width: 50px;
 }
 
 header h1 {
     font-size: 2rem;
-    letter-spacing: 2px;
-    text-transform: uppercase;
+    color: #f5c518;
+    margin-left: 9.5em;
 }
 
-/* --- Section principale --- */
 main {
-    padding: 40px 20px;
+    padding: 20px;
 }
 
-.liste {
-    background: rgba(255, 255, 255, 0.3);
-    backdrop-filter: blur(10px);
-    border-radius: 16px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-    padding: 30px;
-    margin: 20px auto;
-    max-width: 1200px;
-    animation: fadeIn 0.8s ease-in-out;
-}
-
-h2, h3, h4 {
-    color: #581845;
-    text-transform: uppercase;
-    margin-bottom: 20px;
-    font-weight: 500;
+section.liste {
+    max-width: 900px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
 }
 
 h2 {
-    font-size: 1.5rem;
-    border-bottom: 2px solid #581845;
-    display: inline-block;
+    font-size: 1.8rem;
+    color: #f5c518;
+    border-bottom: 2px solid #f5c518;
+    margin-bottom: 15px;
     padding-bottom: 5px;
 }
 
 h3 {
-    font-size: 1.4rem;
+    font-size: 1.3rem;
+    color: #fff;
+    margin-bottom: 10px;
 }
 
-h4 {
-    font-size: 1.2rem;
-    font-style: italic;
-}
-
-p {
-    margin-top: 10px;
-    font-size: 1rem;
-    line-height: 1.6;
-}
-
-/* --- Liste des éléments --- */
 ul {
     list-style: none;
+    margin: 0;
     padding: 0;
-    margin: 20px 0;
 }
 
-li {
-    background: rgba(255, 255, 255, 0.6);
-    backdrop-filter: blur(10px);
-    border-radius: 12px;
-    margin: 20px 0;
-    padding: 20px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+li.box {
+    background-color: #1f1f1f;
+    border: 1px solid #333;
+    border-radius: 10px;
+    padding: 15px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     transition: transform 0.3s, box-shadow 0.3s;
 }
 
-li:hover {
+li.box:hover {
     transform: translateY(-5px);
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
 }
 
-.lien {
-    color: #581845;
-    text-decoration: none;
-    font-weight: bold;
-    position: relative;
-    padding-bottom: 2px;
-    transition: all 0.3s ease;
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+li.box img {
+    width: 20%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 10px;
 }
 
-.lien:hover {
-    color: #000;
-    border-bottom: 2px solid #581845;
-    transform: scale(1.1);
-}
-
-.lien:before {
-    content: '➤';
-    margin-right: 8px;
-    font-size: 18px;
-}
-
-/* --- Images --- */
-img {
-    width: 100%; /* Par défaut, occupe toute la largeur disponible */
-    max-width: 200px; /* Limite la taille des images */
-    height: auto; /* Maintient les proportions */
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
-}
-
-img:hover {
-    transform: scale(1.05);
-}
-
-/* --- Conteneur d'images --- */
 .image-container {
     display: flex;
-    gap: 15px;
+    gap: 10px;
     flex-wrap: wrap;
-    justify-content: left;
-    align-items: center;
-    margin-top: 20px;
 }
 
+.image-container img {
+    flex: 1 1 calc(25% - 10px);
+    max-width: calc(25% - 50px);
+    height: auto;
+    object-fit: cover;
+}
 
-
-
-/* --- Bouton retour haut de page --- */
-.scroll-to-top {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background: rgba(88, 24, 69, 0.8);
-    color: white;
-    font-size: 24px;
-    border-radius: 50%;
-    padding: 15px;
+a.lien {
+    color: #f5c518;
     text-decoration: none;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity 0.3s, transform 0.3s;
+    font-weight: bold;
+    transition: color 0.3s;
 }
 
-.scroll-to-top.show {
-    visibility: visible;
-    opacity: 1;
-    transform: translateY(0);
+a.lien:hover {
+    color: #ffdd57;
+}
+
+footer {
+    text-align: center;
+    background-color: #1f1f1f;
+    padding: 20px;
+    border-top: 2px solid #333;
+}
+
+footer p {
+    margin-bottom: 10px;
+    font-size: 0.9rem;
+    color: #777;
+}
+
+.scroll-to-top {
+    color: #f5c518;
+    font-size: 1.2rem;
+    text-decoration: none;
+    transition: color 0.3s;
 }
 
 .scroll-to-top:hover {
-    background: #333;
+    color: #ffdd57;
 }
 
-/* --- Footer --- */
-footer {
-    text-align: center;
-    background: rgba(88, 24, 69, 0.8);
-    color: white;
-    padding: 15px;
-    font-size: 1rem;
-    position: relative;
+.alternate-left {
+    display: flex;
+    justify-content: flex-start;
 }
 
-footer a {
-    color: white;
-    text-decoration: none;
+.alternate-right {
+    display: flex;
+    justify-content: flex-end;
 }
 
-/* --- Responsiveness --- */
+.alternate-left .box {
+    text-align: left;
+}
+
+.alternate-right .box {
+    text-align: right;
+}
+
 @media (max-width: 768px) {
     header h1 {
         font-size: 1.5rem;
     }
 
     .image-container img {
-        max-width: 47%;
-    }
-    header .logo {
-        top: 25px; /* Ajuste la position en haut */
-        right: 15px; /* Réduit la marge à droite */
-        width: 40px; /* Réduit la taille du logo */
-    }
-}
-
-@media (max-width: 480px) {
-    header h1 {
-        font-size: 1.3rem;
+        flex: 1 1 calc(50% - 10px);
+        max-width: calc(50% - 10px);
     }
 
-    img {
-        max-width: 90%;
+    li.box {
+        padding: 10px;
     }
 
-    li {
-        padding: 15px;
-    }
-    header .logo {
-        top: 10px; /* Position légèrement plus basse */
-        right: 10px; /* Réduit encore la marge */
-        width: 35px; /* Encore plus petit pour s'adapter */
-    }
-}
-
-/* --- Animation --- */
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
+    h2 {
+        font-size: 1.5rem;
     }
 }
