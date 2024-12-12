@@ -89,6 +89,7 @@ li.box img {
     height: auto;
     border-radius: 5px;
     margin-bottom: 10px;
+	transition: transform 0.3s, box-shadow 0.3s;
 }
 
 
