@@ -51,6 +51,10 @@ h2 {
     border-bottom: 2px solid #f5c518;
     margin-bottom: 15px;
     padding-bottom: 5px;
+	text-shadow: 
+                0 0 1px #f5c518,
+                0 0 3px #f5c518,
+                0 0 5px #f5c518;
 }
 
 h3 {
@@ -133,24 +137,6 @@ footer p {
 
 .scroll-to-top:hover {
     color: #ffdd57;
-}
-
-.alternate-left {
-    display: flex;
-    justify-content: flex-start;
-}
-
-.alternate-right {
-    display: flex;
-    justify-content: flex-end;
-}
-
-.alternate-left .box {
-    text-align: left;
-}
-
-.alternate-right .box {
-    text-align: right;
 }
 
 @media (max-width: 768px) {
