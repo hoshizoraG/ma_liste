@@ -150,6 +150,7 @@ footer p {
     header h1 {
     font-size: 1.3rem;
     color: #f5c518;
+	margin-right: 2em;
 }
 
     .image-container img {
@@ -161,7 +162,7 @@ footer p {
         padding: 10px;
     }
 	li.box img {
-    width: 40%;
+    width: 50%;
     height: auto;
     border-radius: 5px;
     margin-bottom: 10px;
