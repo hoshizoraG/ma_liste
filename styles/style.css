@@ -148,8 +148,9 @@ footer p {
 
 @media (max-width: 768px) {
     header h1 {
-        font-size: 1.5rem;
-    }
+    font-size: 1.3rem;
+    color: #f5c518;
+}
 
     .image-container img {
         flex: 1 1 calc(50% - 10px);
@@ -159,6 +160,13 @@ footer p {
     li.box {
         padding: 10px;
     }
+	li.box img {
+    width: 40%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 10px;
+	transition: transform 0.3s, box-shadow 0.3s;
+}
 
     h2 {
         font-size: 1.5rem;
