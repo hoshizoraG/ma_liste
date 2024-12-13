@@ -22,15 +22,16 @@ document.querySelector('.scroll-to-top').addEventListener('click', function(even
 document.getElementById('logo').addEventListener('click', function() {
     var gif = document.getElementById('gif');
     
-    // Hide the logo and show the GIF
+    // Show the GIF and restart it
     gif.style.display = 'block';
-    gif.src = gif.src;  // This will restart the GIF
-    
-    // Optional: Hide the GIF after it has finished playing (set timeout or event listener)
+    gif.src = gif.src;  // Restart the GIF by resetting the source
+
+    // Optional: Hide the GIF after 5 seconds (adjust as needed)
     setTimeout(function() {
         gif.style.display = 'none';
-    }, 5000);  // Hide after 5 seconds (adjust as needed)
+    }, 5000);  // Hide after 5 seconds
 });
+
 
 
 window.addEventListener('wheel', function(event) {
