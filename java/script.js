@@ -29,7 +29,7 @@ document.getElementById('logo').addEventListener('click', function() {
     // Optional: Hide the GIF after 5 seconds (adjust as needed)
     setTimeout(function() {
         gif.style.display = 'none';
-    }, 5000);  // Hide after 5 seconds
+    }, 4000);  // Hide after 5 seconds
 });
 
 
