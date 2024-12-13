@@ -19,10 +19,19 @@ document.querySelector('.scroll-to-top').addEventListener('click', function(even
     });
 });
 
-// Gère le clic sur le logo
 document.getElementById('logo').addEventListener('click', function() {
-    alert('bravo tu as decouvert le secret, tu as gagné le droit de me faire plus de cadeau! :)');
+    var gif = document.getElementById('gif');
+    
+    // Hide the logo and show the GIF
+    gif.style.display = 'block';
+    gif.src = gif.src;  // This will restart the GIF
+    
+    // Optional: Hide the GIF after it has finished playing (set timeout or event listener)
+    setTimeout(function() {
+        gif.style.display = 'none';
+    }, 5000);  // Hide after 5 seconds (adjust as needed)
 });
+
 
 window.addEventListener('wheel', function(event) {
     // Empêche le défilement vers le haut si on est déjà en haut
