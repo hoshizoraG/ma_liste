@@ -13,6 +13,15 @@ body {
     padding: 0;
 }
 
+#gif {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+    z-index: 9999; 
+}
+
 header {
     background-color: #1f1f1f;
     padding: 20px;
